@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>志愿推荐</title>
+
+</head>
+<body>
+<form action="/predict" method="get">
+文科\理科：<input type="text" class="s_ipt" name="wd3" id="kw3" maxlength="100" autocomplete="off"><br>
+<!--分数：<input type="number" class="s_ipt" name="wd1" id="kw1" maxlength="100" autocomplete="off"><br>-->
+排名：<input type="number" class="s_ipt" name="wd2" id="kw2" maxlength="100" autocomplete="off"><br>
+<input type="submit" value="提交分数" id="su" class="btn self-btn bg s_btn">
+{% if data %}
+<h1>{{data}}</h1>
+{% endif %}
+</form>
+
+<table border="0">
+<tr>
+<td>{% if result11 %} 学校{% endif %}</td>
+<td>{% if result12 %} 概率{% endif %}</td>
+<td>{% if result13 %} 推荐指数{% endif %}</td>
+</tr>
+<tr>
+<td>{% if result11 %} {{result11}}{% endif %}</td>
+<td>{% if result12 %} {{result12}}{% endif %}</td>
+<td>{% if result13 %} {{result13}}{% endif %}</td>
+</tr>
+<tr>
+<td>{% if result21 %} {{result21}}{% endif %}</td>
+<td>{% if result22 %} {{result22}}{% endif %}</td>
+<td>{% if result23 %} {{result23}}{% endif %}</td>
+</tr>
+<tr>
+<td>{% if result31 %} {{result31}}{% endif %}</td>
+<td>{% if result32 %} {{result32}}{% endif %}</td>
+<td>{% if result33 %} {{result33}}{% endif %}</td>
+</tr>
+<tr>
+<td>{% if result41 %} {{result41}}{% endif %}</td>
+<td>{% if result42 %} {{result42}}{% endif %}</td>
+<td>{% if result43 %} {{result43}}{% endif %}</td>
+</tr>
+<tr>
+<td>{% if result51 %} {{result51}}{% endif %}</td>
+<td>{% if result52 %} {{result52}}{% endif %}</td>
+<td>{% if result53 %} {{result53}}{% endif %}</td>
+</tr>
+</table>
+
+
+
+
+
+</body>
+</html>
